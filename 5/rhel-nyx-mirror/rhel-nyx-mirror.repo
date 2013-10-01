@@ -1,0 +1,28 @@
+[rhel-server]
+name=Red Hat Enterprise Linux $releasever - $basearch - Server
+baseurl=http://skutecz.belfast.wombatfs.com/rhel/$releasever/os/$basearch/Server/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-vt]
+name=Red Hat Enterprise Linux $releasever - $basearch - VT
+baseurl=http://skutecz.belfast.wombatfs.com/rhel/$releasever/os/$basearch/VT/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-cluster]
+name=Red Hat Enterprise Linux $releasever - $basearch - Cluster
+baseurl=http://skutecz.belfast.wombatfs.com/rhel/$releasever/os/$basearch/Cluster/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-clusterstorage]
+name=Red Hat Enterprise Linux $releasever - $basearch - ClusterStorage
+baseurl=http://skutecz.belfast.wombatfs.com/rhel/$releasever/os/$basearch/ClusterStorage/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
