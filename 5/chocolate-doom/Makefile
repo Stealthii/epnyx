@@ -3,4 +3,4 @@ DIR=`pwd`
 DIST=.el5
 SPECFILE="chocolate-doom.spec"
 
-include Makefile.global
+include ../../common/Makefile.global
