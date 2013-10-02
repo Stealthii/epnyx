@@ -1,0 +1,12 @@
+--- vim74/src/configure.in	2013-10-02 14:37:38.000000000 +0100
++++ vim74/src/configure.in.autoconf259	2013-10-02 14:38:51.000000000 +0100
+@@ -4,6 +4,9 @@
+ dnl Process this file with autoconf 2.12 or 2.13 to produce "configure".
+ dnl Should also work with autoconf 2.54 and later.
+ 
++dnl Patch for autoconf 2.59
++m4_pattern_allow([AC_TYPE_UINT32_T])
++
+ AC_INIT(vim.h)
+ AC_CONFIG_HEADER(auto/config.h:config.h.in)
+ 

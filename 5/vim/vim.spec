@@ -2,7 +2,7 @@
 %if %{?WITH_SELINUX:0}%{!?WITH_SELINUX:1}
 %define WITH_SELINUX 1
 %endif
-%define desktop_file 1
+%define desktop_file 0
 %if %{desktop_file}
 %define desktop_file_utils_version 0.2.93
 %endif
@@ -11,7 +11,7 @@
 
 %define withvimspell 0
 %define withhunspell 0
-%define withruby 1
+%define withruby 0
 
 %define baseversion 7.4
 %define vimdir vim74
@@ -20,7 +20,7 @@ Summary: The VIM editor
 URL:     http://www.vim.org/
 Name: vim
 Version: %{baseversion}.%{patchlevel}
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: Vim
 Group: Applications/Editors
 Source0: ftp://ftp.vim.org/pub/vim/unix/vim-%{baseversion}.tar.bz2
@@ -87,10 +87,11 @@ Patch3011: vim72-rh514717.patch
 Patch3012: vim-7.3-manpage-typo-668894-675480.patch
 Patch3013: vim-7.3-xsubpp-path.patch
 Patch3014: vim-manpagefixes-948566.patch
+Patch3015: vim-7.4-autoconf259.patch
 
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: python-devel ncurses-devel gettext perl-devel
-BuildRequires: perl(ExtUtils::Embed) perl(ExtUtils::ParseXS)
+BuildRequires: python-devel ncurses-devel gettext
+BuildRequires: perl(ExtUtils::Embed)
 BuildRequires: libacl-devel gpm-devel autoconf
 %if %{WITH_SELINUX}
 BuildRequires: libselinux-devel
@@ -267,6 +268,7 @@ perl -pi -e "s,bin/nawk,bin/awk,g" runtime/tools/mve.awk
 %patch3013 -p1
 %endif
 %patch3014 -p1
+%patch3015 -p1
 
 %build
 cp -f %{SOURCE5} .
@@ -746,6 +748,10 @@ rm -rf %{buildroot}
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Wed Oct 02 2013 Daniel Porter <dporter@nyx.com> 7.4.027-3
+- RHEL5 compatibility changes
+- Dropped ruby support
+
 * Wed Sep 11 2013 Karsten Hopp <karsten@redhat.com> 7.4.027-2
 - update vim icons (#1004788)
 - check if 'id -u' returns empty string (vim.sh)
