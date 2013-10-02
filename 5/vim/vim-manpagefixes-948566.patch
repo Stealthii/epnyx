@@ -1,0 +1,31 @@
+diff -up vim73/runtime/doc/vim.man.rh1 vim73/runtime/doc/vim.man
+--- vim73/runtime/doc/vim.man.rh1	2013-07-26 11:26:20.566576864 +0200
++++ vim73/runtime/doc/vim.man	2013-07-26 11:47:42.061351469 +0200
+@@ -11,9 +11,9 @@ SYNOPSIS
+        vim [options] -t tag
+        vim [options] -q [errorfile]
+ 
+-       ex
++       ex gex
+        view
+-       gvim gview evim eview
++       gvim gview vimx evim eview
+        rvim rview rgvim rgview
+ 
+ DESCRIPTION
+@@ -79,8 +79,13 @@ DESCRIPTION
+                  the files.  Can also be done with the "-R" argument.
+ 
+        gvim gview
+-                 The GUI version.  Starts a new window.  Can also be done with
+-                 the "-g" argument.
++                 The GUI version.  Starts a new window.
++
++       gex       Starts a new gvim window in Ex mode. Can also be done with
++                 the "-e" argument to gvim
++
++       vimx      Starts gvim in "Vi" mode similar to "vim", but with 
++                 additional features like xterm clipboard support
+ 
+        evim eview
+                  The GUI version in easy mode.  Starts a new window.  Can also
