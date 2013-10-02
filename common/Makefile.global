@@ -13,7 +13,7 @@ prep:
 clean:	
 	rm -rf i386/ i586/ i686/ x86_64/ noarch/
 	rm -f *.src.rpm
-	rm -f *.tar *.tar.gz *.tar.bz2 *.tgz *.zip
+	#rm -f *.tar *.tar.gz *.tar.bz2 *.tgz *.zip
 
 srpm: prep
 	rpmbuild --define "_sourcedir ." --define "_specdir ." \
