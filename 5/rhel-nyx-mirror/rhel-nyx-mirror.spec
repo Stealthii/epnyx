@@ -4,6 +4,7 @@ Release:        1
 Summary:        RHEL NYX Mirror configuration
 
 Group:          System Environment/Base 
+License:        Copyright
 URL:            http://skutecz.belfast.wombatfs.com/rhel
 
 Source0:        rhel-nyx-mirror.repo	
