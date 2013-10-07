@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="applications-menu" label="Applications" execute="_XDGMENU_ applications"/>
+<menu id="preferences-menu" label="Preferences" execute="_XDGMENU_ preferences"/>
+<menu id="administration-menu" label="Administration" execute="_XDGMENU_ system-settings"/>
+
+<menu id="apps-term-menu" label="Terminals">
+  <item label="Rxvt Unicode">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </item>
+  <item label="Gnome Terminal">
+    <action name="Execute">
+      <command>gnome-terminal</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Xfce Terminal">
+    <action name="Execute">
+      <command>xfce4-terminal</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Konsole">
+    <action name="Execute">
+      <command>konsole</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Xterm">
+    <action name="Execute"><command>xterm</command></action>
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Openbox"/>
+  <menu id="applications-menu"/>
+  <menu id="preferences-menu"/>
+  <menu id="administration-menu"/>
+  <separator/>
+  <menu id="apps-term-menu"/>
+  <separator/>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  <separator/>
+  <item label="Log Out">
+    <action name="SessionLogout">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>

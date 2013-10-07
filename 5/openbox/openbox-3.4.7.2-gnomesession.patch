@@ -1,0 +1,9 @@
+diff -up openbox-3.4.7.2/data/xsession/openbox-gnome-session.in.gnomesession openbox-3.4.7.2/data/xsession/openbox-gnome-session.in
+--- openbox-3.4.7.2/data/xsession/openbox-gnome-session.in.gnomesession	2008-09-04 16:48:21.000000000 +0200
++++ openbox-3.4.7.2/data/xsession/openbox-gnome-session.in	2008-09-04 16:49:56.000000000 +0200
+@@ -12,4 +12,4 @@ xprop -root -remove _NET_NUMBER_OF_DESKT
+ 
+ # Run GNOME with Openbox as its window manager
+ export WINDOW_MANAGER="@bindir@/openbox"
+-exec gnome-session --choose-session=openbox-session "$@"
++exec gnome-session "$@"

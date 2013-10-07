@@ -1,0 +1,12 @@
+diff -up openbox-3.4.7.1/Makefile.in.autostartdir openbox-3.4.7.1/Makefile.in
+--- openbox-3.4.7.1/Makefile.in.autostartdir	2008-04-16 17:37:46.000000000 +0200
++++ openbox-3.4.7.1/Makefile.in	2008-04-16 18:24:22.000000000 +0200
+@@ -479,7 +479,7 @@ pkgconfigdir = $(libdir)/pkgconfig
+ pubincludedir = $(includedir)/openbox/@OB_VERSION@/openbox
+ pixmapdir = $(datadir)/pixmaps
+ xsddir = $(datadir)/openbox
+-secretbindir = $(libdir)/openbox
++secretbindir = $(datadir)/openbox
+ theme = Clearlooks
+ AUTOMAKE_OPTIONS = subdir-objects foreign
+ ACLOCAL_AMFLAGS = -I m4
