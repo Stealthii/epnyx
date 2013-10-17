@@ -21,7 +21,6 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Requires:       redhat-release >=  %{version}
 Conflicts:      fedora-release, epel-release
-Provides:       epel-release
 
 %description
 This package contains the Extra Packages for Enterprise Linux (EPEL) repository
