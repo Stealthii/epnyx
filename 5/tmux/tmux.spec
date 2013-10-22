@@ -1,6 +1,6 @@
 Name:           tmux
-Version:        1.6
-Release:        2%{?dist}
+Version:        1.7
+Release:        1%{?dist}
 Summary:        A terminal multiplexer
 
 Group:          Applications/System
@@ -12,7 +12,7 @@ Source0:        http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildRequires:  ncurses-devel
-BuildRequires:  libevent-devel
+BuildRequires:  libevent-devel >= 1.4.14b
 
 %description
 tmux is a "terminal multiplexer."  It enables a number of terminals (or
@@ -57,6 +57,9 @@ fi
 %{_localstatedir}/run/tmux/
 
 %changelog
+* Tue Oct 22 2013 Daniel Porter <dporter@nyx.com> - 1.7-1
+- new upstream release
+
 * Tue Oct 22 2013 Daniel Porter <dporter@nyx.com> - 1.6-2
 - Remove outdated packages and improve setup
 
