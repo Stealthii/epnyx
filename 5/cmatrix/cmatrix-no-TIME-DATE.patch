@@ -1,0 +1,14 @@
+Index: cmatrix-1.2a/cmatrix.c
+===================================================================
+--- cmatrix-1.2a.orig/cmatrix.c
++++ cmatrix-1.2a/cmatrix.c
+@@ -142,8 +142,7 @@ void usage(void)
+ 
+ void version(void)
+ {
+-    printf(" CMatrix version %s by Chris Allegretta (compiled %s, %s)\n",
+-	   VERSION, __TIME__, __DATE__);
++    printf(" CMatrix version %s by Chris Allegretta\n", VERSION);
+     printf(" Email: cmatrix@asty.org  Web: http://www.asty.org/cmatrix\n");
+ }
+ 
