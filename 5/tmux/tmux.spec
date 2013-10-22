@@ -1,5 +1,5 @@
 Name:           tmux
-Version:        1.7
+Version:        1.8
 Release:        1%{?dist}
 Summary:        A terminal multiplexer
 
@@ -25,14 +25,11 @@ as GNU Screen.
 
 %build
 %configure
-make %{?_smp_mflags}
+make %{?_smp_mflags} LDFLAGS="%{optflags}"
 
 %install
 rm -rf %{buildroot}
 make install DESTDIR=%{buildroot} INSTALLBIN="install -p -m 755" INSTALLMAN="install -p -m 644"
-
-# Create the socket dir
-%{__install} -d -m0755 %{buildroot}%{_localstatedir}/run/tmux/
 
 %post
 if [ ! -f %{_sysconfdir}/shells ] ; then
@@ -46,17 +43,16 @@ if [ $1 -eq 0 ] && [ -f %{_sysconfdir}/shells ]; then
     sed -i '\!^%{_bindir}/tmux$!d' %{_sysconfdir}/shells
 fi
 
-%clean
-%{__rm} -rf %{buildroot}
-
 %files
 %defattr(-,root,root,-)
-%doc CHANGES FAQ NOTES TODO examples/
+%doc CHANGES FAQ TODO examples/
 %doc %{_mandir}/man1/tmux.1.*
 %{_bindir}/tmux
-%{_localstatedir}/run/tmux/
 
 %changelog
+* Tue Oct 22 2013 Daniel Porter <dporter@nyx.com> - 1.8-1
+- new upstream release
+
 * Tue Oct 22 2013 Daniel Porter <dporter@nyx.com> - 1.7-1
 - new upstream release
 
