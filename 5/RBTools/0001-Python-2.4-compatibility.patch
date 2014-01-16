@@ -1,0 +1,25 @@
+From aaa5e7bdec5216cc09998f91d40b7dc9166523a7 Mon Sep 17 00:00:00 2001
+From: Daniel Porter <dporter@nyx.com>
+Date: Thu, 16 Jan 2014 16:29:29 +0000
+Subject: [PATCH] Python 2.4 compatibility
+
+---
+ rbtools/commands/setup_repo.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/rbtools/commands/setup_repo.py b/rbtools/commands/setup_repo.py
+index a1ea2c6..f0b2adf 100644
+--- a/rbtools/commands/setup_repo.py
++++ b/rbtools/commands/setup_repo.py
+@@ -97,7 +97,7 @@ class SetupRepo(Command):
+             output = self._get_output(config)
+             outfile.write(output)
+             outfile.close()
+-        except IOError as e:
++        except IOError, e:
+             raise CommandError('I/O error generating config file (%s): %s'
+                                % (e.errno, e.strerror))
+ 
+-- 
+1.8.3.1
+

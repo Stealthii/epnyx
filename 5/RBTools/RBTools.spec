@@ -4,14 +4,14 @@
 %endif
 
 Name:           RBTools
-Version:        0.5.2
+Version:        0.5.5
 Release:        1%{?dist}
 Summary:        Tools for use with ReviewBoard
 
 Group:          Applications/Internet
 License:        MIT
 URL:            http://www.review-board.org
-Source0:        http://downloads.review-board.org/releases/%{name}/0.3/%{name}-%{version}.tar.gz
+Source0:        http://downloads.reviewboard.org/releases/%{name}/0.5/%{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
@@ -23,7 +23,7 @@ Requires:       python-simplejson
 ### Patches ###
 
 # Don't use ez_setup, since RPM provides equivalent functionality
-Patch1001: FED01-Disable-ez_setup-when-installing-by-RPM.patch
+Patch1001: 0001-Python-2.4-compatibility.patch
 
 %description
 RBTools provides client tools for interacting with a ReviewBoard
@@ -61,8 +61,14 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/RBTools*.egg-info/
 
 %changelog
+* Thu Jan 16 2014 Daniel Porter <dporter@nyx.com> - 0.5.5-1
+- New upstream 0.5.5 release
+- Removed unnecessary patch
+- Add patch for Python 2.4 compatibility
+
 * Fri Nov 08 2013 Daniel Porter <dporter@nyx.com> - 0.5.2-1
 - New upstream 0.5.2 release
+
 * Tue Sep 27 2011 Stephen Gallagher <sgallagh@redhat.com> - 0.3.4-1
 - New upstream 0.3.4 release
 - http://www.reviewboard.org/docs/releasenotes/dev/rbtools/0.3.4/
