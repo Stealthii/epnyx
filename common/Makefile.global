@@ -8,7 +8,7 @@ prep:
 	# svn up
 
 	# Use spectool to download source files, especially tarballs.
-	# spectool -g -S $(SPECFILE)
+	spectool -g -S $(SPECFILE)
 
 clean:	
 	rm -rf i386/ i586/ i686/ x86_64/ noarch/
