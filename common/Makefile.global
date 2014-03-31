@@ -7,8 +7,8 @@ prep:
 	# Update spec file, patches, etc, before running spectool:
 	# svn up
 
-	# Use spectool to download source files, especially tarballs.
-	spectool -g -S $(SPECFILE)
+	# Use spectool to download source files, and patch files.
+	spectool -g -S -P $(SPECFILE)
 
 clean:	
 	rm -rf i386/ i586/ i686/ x86_64/ noarch/
