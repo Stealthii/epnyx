@@ -5,9 +5,9 @@ Summary:	A highly configurable and standards-compliant X11 window manager
 
 Group:		User Interface/Desktops
 License:	GPLv2+
-URL:		http://icculus.org/openbox
-Source0:	http://icculus.org/openbox/releases/%{name}-%{version}.tar.gz
-Source1:	http://icculus.org/openbox/tools/setlayout.c
+URL:		http://openbox.org/
+Source0:	http://openbox.org/dist/openbox/%{name}-%{version}.tar.gz
+Source1:	http://openbox.org/dist/tools/setlayout.c
 Source2:	xdg-menu
 Source3:	menu.xml
 

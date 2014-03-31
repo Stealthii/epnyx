@@ -6,7 +6,7 @@ Summary:	A Library for handling OpenType Font
 Group:		System Environment/Libraries
 License:	LGPLv2+
 URL:		http://www.m17n.org/libotf/
-Source0:	 http://www.m17n.org/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://pkgs.fedoraproject.org/repo/pkgs/%{name}/%{name}-%{version}.tar.gz/95e5452263bf8e75ece988e6d827b55c/%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:	gcc chrpath freetype-devel libXaw-devel

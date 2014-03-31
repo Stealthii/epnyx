@@ -6,7 +6,7 @@ Summary:	Zsh is a shell designed for interactive use, although it is also a powe
 Group:		System/Shells
 License:	MIT
 URL:		http://zsh.sourceforge.net
-Source0:	zsh-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/%{name}/%{version}/%{name}-%{version}.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires:	ncurses-devel

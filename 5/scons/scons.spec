@@ -7,7 +7,7 @@ Summary: an Open Source software construction tool
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.gz
+Source0: http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 #Copyright: The SCons Foundation
 License: MIT, freely distributable
 Group: Development/Tools

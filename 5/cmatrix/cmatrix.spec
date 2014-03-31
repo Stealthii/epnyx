@@ -7,7 +7,7 @@ License:        GNU General Public License (GPL)
 Summary:        The Console Screensaver in Accordance with Matrix
 URL:            http://www.asty.org/cmatrix/
 Group:          Applications/Terminal
-Source:         cmatrix-%{version}.tar.bz2
+Source:         http://www.asty.org/cmatrix/dist/cmatrix-%{version}.tar.gz
 Patch0:         cmatrix-%{version}-makefile.patch
 Patch1:         cmatrix-no-TIME-DATE.patch
 BuildRequires:  autoconf

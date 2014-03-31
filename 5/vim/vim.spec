@@ -26,7 +26,7 @@ Group: Applications/Editors
 Source0: ftp://ftp.vim.org/pub/vim/unix/vim-%{baseversion}.tar.bz2
 Source3: gvim.desktop
 Source4: vimrc
-Source5: ftp://ftp.vim.org/pub/vim/patches/README.patches
+Source5: ftp://ftp.vim.org/pub/vim/patches/%{baseversion}/README
 Source7: gvim16.png
 Source8: gvim32.png
 Source9: gvim48.png
