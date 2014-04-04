@@ -1,6 +1,6 @@
 Name: 		zsh		
-Version:	5.0.2
-Release:	14.1%{?dist}
+Version:	5.0.5
+Release:	1%{?dist}
 Summary:	Zsh is a shell designed for interactive use, although it is also a powerful scripting language
 
 Group:		System/Shells
@@ -53,6 +53,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Apr 04 2014 Daniel Porter <dporter@nyx.com> - 5.0.5-1
+- Upstream release 5.0.5
+
 * Wed Oct 09 2013 Daniel Porter <dporter@nyx.com> - 5.0.2-14.1
 - Initial release for EL5
 
