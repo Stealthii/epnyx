@@ -53,4 +53,6 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Oct 09 2013 Daniel Porter <dporter@nyx.com> - 5.0.2-14.1
+- Initial release for EL5
 
