@@ -23,10 +23,10 @@ BuildRequires: zlib-devel
 BuildRequires: gzip
 
 %if "%{_dist_ver}" == ".el5"
-# require EPEL
-BuildRequires: python26
-%endif
+# require IUS python27
+BuildRequires: python27
 Patch0: node-js.centos5.configure.patch
+%endif
 
 %description
 Node.js is a server-side JavaScript environment that uses an asynchronous event-driven model.
@@ -73,7 +73,7 @@ rm -rf $RPM_SOURCE_DIR/%{_base}-v%{version}
 
 %build
 %if "%{_dist_ver}" == ".el5"
-export PYTHON=python26
+export PYTHON=python2.7
 %endif
 %define _node_arch %{nil}
 %ifarch x86_64
